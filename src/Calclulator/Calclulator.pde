@@ -93,10 +93,13 @@ void mouseReleased() {
         newEntry = true;
         displayVal = str(op);
       } else if (clicked == 'C') {
-        op = clicked;
-        left = false;
-        newEntry = true;
-        displayVal = str(op);
+        l = 0.0;
+        r=0.0;
+        result=0.0;
+        op = ' ';
+        left = true;
+        newEntry= true;
+        displayVal = "0.0";
       } else if (clicked == '√') {
         if (left == true) {
           l = sqrt(l);
@@ -187,42 +190,36 @@ void keyPressed() {
   if (key == '1') {
     println("You hit 1" + keyCode);
     handleEvent('1', true);
-  }
-  if (key == '2') {
+  }else if (key == '2') {
     println("You hit 2" + keyCode);
     handleEvent('2', true);
-  }
-  if (key == '3') {
+  }else if (key == '3') {
     println("You hit 3" + keyCode);
     handleEvent('3', true);
-  }
-  if (key == '4') {
+  } else if (key == '4') {
     println("You hit 4" + keyCode);
     handleEvent('4', true);
-  }
-  if (key == '5') {
+  } else if (key == '5') {
     println("You hit 5" + keyCode);
     handleEvent('5', true);
-  }
-  if (key == '6') {
+  } else if (key == '6') {
     println("You hit 6" + keyCode);
     handleEvent('6', true);
-  }
-  if (key == '7') {
+  } else if (key == '7') {
     println("You hit 7" + keyCode);
     handleEvent('7', true);
-  }
-  if (key == '8') {
+  } else if (key == '8') {
     println("You hit 8" + keyCode);
     handleEvent('8', true);
-  }
-  if (key == '9') {
+  } else if (key == '9') {
     println("You hit 9" + keyCode);
     handleEvent('9', true);
-  }
-  if (key == '0') {
+  } else if (key == '0') {
     println("You hit 0" + keyCode);
     handleEvent('0', true);
+  } else if (keyCode == 45) {
+    println("You hit -" + keyCode);
+    handleEvent('-', false);
   }
 }
 
