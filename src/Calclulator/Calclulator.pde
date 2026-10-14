@@ -220,6 +220,18 @@ void keyPressed() {
   } else if (keyCode == 45) {
     println("You hit -" + keyCode);
     handleEvent('-', false);
+  } else if (key == '+') {
+    println("You hit +" + keyCode);
+    handleEvent('+', false);
+  } else if (key == '/') {
+    println("You hit /" + keyCode);
+    handleEvent('/', false);
+  } else if (key == '*') {
+    println("You hit *" + keyCode);
+    handleEvent('*', false);
+  } else if (key == 'C') {
+    println("You hit Clear" + keyCode);
+    handleEvent('C', false);
   }
 }
 
@@ -231,6 +243,19 @@ void handleEvent(char val, boolean isNum) {
       // Replace value if 0.0
       displayVal=digit;
       newEntry = false;
+    } else {
+      displayVal += digit;
+    }
+
+    if (left == true) {
+      l = float(displayVal);
+    } else {
+      r = float(displayVal);
+    }
+  } else {
+    // other stuff
+  }
+}
     } else {
       displayVal += digit;
     }
