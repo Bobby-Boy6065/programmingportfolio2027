@@ -232,7 +232,10 @@ void keyPressed() {
   } else if (key == 'C') {
     println("You hit Clear" + keyCode);
     handleEvent('C', false);
-  }
+  } else if (key == '.') {
+    println("You hit ." + keyCode);
+    handleEvent('.', false);
+  } 
 }
 
 void handleEvent(char val, boolean isNum) {
